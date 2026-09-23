@@ -457,8 +457,7 @@ body {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 1.5rem;
-  /* align-items: start என மாற்றினால் கார்டுகள் தேவைக்கு ஏற்ப உயரும் */
-  align-items: start; 
+  align-items: stretch; /* இரு பக்க பத்திகளையும் ஒரே உயரத்திற்குக் கொண்டுவரும் */
 }
 
 .bento-left-column,
@@ -466,13 +465,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: auto; /* 100% தூக்கிவிட்டு auto ஆக்கப்பட்டது */
+  height: 100%; /* இரு பக்கப் பத்திகளின் உயரத்தையும் சமமாக்கும் */
 }
 
 .bento-card {
-  /* flex: 1 தூக்கப்பட்டு height: auto ஆக்கப்பட்டுள்ளது */
-  height: auto;
-  min-height: max-content;
+  flex: 1; /* கார்டுகள் பத்தியின் உயரத்தைச் சமமாகப் பிரித்துக் கொள்ளும் */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background: var(--card-bg);
   padding: 24px;
   overflow: hidden;
@@ -480,9 +480,6 @@ body {
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   position: relative;
   box-sizing: border-box;
 }
@@ -523,6 +520,14 @@ body {
   line-height: 1.6;
   margin: 0;
 }
+
+/* மொபைல் திரைகளுக்கான ரெஸ்பான்சிவ் அமைப்பு */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ==========================================
    📱 MOBILE RESPONSIVE FIX (மொபைலுக்கான சிறப்பு மாற்றம்)

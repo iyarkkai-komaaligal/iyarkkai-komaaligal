@@ -12,6 +12,9 @@
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
   --hover-shadow: 0 20px 40px -15px rgba(22, 163, 74, 0.15);
   --radius: 20px;
+   --award-gold: #d4af37;        /* விருதுகளுக்கான பிரீமியம் தங்கம் */
+  --award-icon-bg: #fef9e7;     /* ஐகானுக்கு பின்னணி லேசான மஞ்சள்/தங்க பாப் */
+  --award-card-border: #dcfce7; /* மென்மையான பச்சை பார்டர் */
 }
 
 [data-theme="dark"] {

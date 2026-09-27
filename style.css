@@ -1014,7 +1014,7 @@ body {
   color: var(--award-gold) !important; /* ஐகானை தங்க நிறத்திற்கு மாற்றும் */
 }
 
-.b-details h4 {
+.b-details h3 {
   font-size: 1.05rem;
   color: var(--text-color);
   font-weight: 700;

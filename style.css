@@ -936,16 +936,13 @@ body {
   align-items: center;
 }
 /* ==========================================
-   AWARDS BADGE SECTION (THEME COMPATIBLE)
+   AWARDS BADGE SECTION (GOLD & GREEN POP)
    ========================================== */
 
 .awards-badge-section {
-  background: var(--section-alt-bg);
+  background: var(--bg-color);
   padding: 4rem 1.5rem;
-  margin: 3rem 0;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  transition: background-color 0.4s ease, border-color 0.4s ease;
+  margin: 2.5rem 0;
 }
 
 .awards-badge-section .section-title {
@@ -955,7 +952,7 @@ body {
 
 .awards-badge-section .section-title h2 {
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   position: relative;
   display: inline-block;
@@ -964,10 +961,10 @@ body {
 .awards-badge-section .section-title h2::after {
   content: '';
   display: block;
-  width: 50%;
-  height: 3px;
-  background: var(--gold-color);
-  margin: 0.5rem auto 0;
+  width: 60px;
+  height: 4px;
+  background: var(--award-gold);
+  margin: 0.6rem auto 0;
   border-radius: 2px;
 }
 
@@ -975,33 +972,46 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Badge Card - மென்மையான பச்சை பார்டர் & ஷேடோ */
 .badge-card {
   background: var(--card-bg);
-  padding: 1.1rem 1.6rem;
+  padding: 1rem 1.6rem;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  min-width: 280px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
+  min-width: 290px;
+  border: 1px solid var(--award-card-border);
+  box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.08); /* லேசான பச்சை ஷேடோ */
   transition: all 0.3s ease;
 }
 
 .badge-card:hover {
-  border-color: var(--gold-color);
+  border-color: var(--award-gold);
   transform: translateY(-4px);
-  box-shadow: var(--hover-shadow);
+  box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.2);
+}
+
+/* ஐகானை வட்ட வடிவத்திற்குள் தங்க நிறத்தில் பிரீமியமாக மாற்றும் பகுதி */
+.b-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--award-icon-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  flex-shrink: 0;
 }
 
 .b-icon i {
-  font-size: 1.8rem;
-  color: var(--gold-color);
-  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--award-gold) !important; /* ஐகானை தங்க நிறத்திற்கு மாற்றும் */
 }
 
 .b-details h4 {
@@ -1016,6 +1026,7 @@ body {
   color: var(--text-muted);
   margin: 0;
 }
+
 
 /* ========================================================
    6. PRODUCTS PAGE STYLES (UPDATED & FIXED)

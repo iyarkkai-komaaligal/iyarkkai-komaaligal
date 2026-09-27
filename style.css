@@ -701,90 +701,92 @@ body {
   padding: 0 1.5rem;
 }
 
+/* TEAM SECTION STYLES */
 .team-section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 90px auto 60px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .divider-line {
-    width: 80%;
-    height: 2px;
-    margin: 0 auto 60px auto;
-    background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
-    border-radius: 2px;
+  width: 80%;
+  height: 2px;
+  margin: 40px auto;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+  border-radius: 2px;
 }
 
 .team-container {
-    text-align: center;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 40px;
-    text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .section-title .highlight {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .team-member-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .member-photo-wrapper {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 25px;
-    box-shadow: var(--card-shadow);
-    background-color: var(--card-bg);
-    border: 2px solid var(--border-color);
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
+  border: 3px solid var(--accent-color);
 }
 
 .member-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .member-name {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text-color);
-    margin: 0 0 12px 0;
-    line-height: 1.4;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
 }
 
 .member-role {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .member-qualifications {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    max-width: 650px;
-    margin: 0 auto;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .member-qualifications .label {
-    text-decoration: underline;
-    font-weight: 600;
-    color: var(--text-color);
+  text-decoration: underline;
+  font-weight: 600;
+  color: var(--text-color);
 }
+
 /* ========================================================
-   NEW ABOUT PAGE EXPERIENCES & STATS STYLES
+   EXPERIENCES, STATS & SPECIALIZATIONS STYLES
    ======================================================== */
 .container-inner {
   max-width: 1100px;
@@ -796,13 +798,20 @@ body {
   text-align: center;
 }
 
+.sub-tag {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
 /* 1. TIMELINE GRID */
 .experience-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: var(--bg-color);
 }
 
-/* 1. TIMELINE GRID (மையத்தில் அமைய) */
 .timeline-grid {
   display: flex;
   flex-wrap: wrap;
@@ -817,17 +826,17 @@ body {
   padding: 1.8rem;
   border-radius: 16px;
   position: relative;
-  transition: transform 0.3s ease;
-  /* 3 கார்டுகள் ஒரே வரியில் வர அகலம் */
+  transition: transform 0.3s ease, border-color 0.3s ease;
   flex: 1 1 calc(33.333% - 1.5rem);
   min-width: 280px;
   max-width: 340px;
+  box-shadow: var(--card-shadow);
 }
 
 .timeline-card:hover {
   transform: translateY(-5px);
+  border-color: var(--accent-color);
 }
-
 
 .timeline-card.highlight-border {
   border-color: var(--accent-color);
@@ -836,7 +845,7 @@ body {
 .card-badge {
   display: inline-block;
   background: var(--accent-color);
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.8rem;
   padding: 4px 12px;
@@ -848,6 +857,7 @@ body {
   font-size: 1.15rem;
   color: var(--text-color);
   margin-bottom: 0.3rem;
+  font-weight: 700;
 }
 
 .timeline-card .location {
@@ -871,7 +881,6 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* 2. STATS GRID (மையத்தில் அமைய) */
 .stats-grid {
   display: flex;
   flex-wrap: wrap;
@@ -886,12 +895,11 @@ body {
   padding: 2rem 1.5rem;
   border-radius: 16px;
   text-align: center;
-  /* 3 கார்டுகள் ஒரே வரியில் வர அகலம் */
-  flex: 1 1 calc(33.333% - 1.5rem);
+  flex: 1 1 calc(25% - 1.5rem);
   min-width: 220px;
-  max-width: 320px;
+  max-width: 280px;
+  box-shadow: var(--card-shadow);
 }
-
 
 .stat-number {
   font-size: 2.2rem;
@@ -904,6 +912,7 @@ body {
   color: var(--text-color);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .stat-card p {
@@ -914,13 +923,13 @@ body {
 
 /* 3. DESIGN SPECIALIZATIONS */
 .design-spec-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .spec-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
   margin-top: 2.5rem;
 }
 
@@ -934,20 +943,21 @@ body {
   color: var(--text-color);
   display: flex;
   align-items: center;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.3s ease;
 }
-/* ==========================================
-   AWARDS BADGE SECTION (GOLD & GREEN POP)
-   ========================================== */
 
+.spec-item:hover {
+  border-color: var(--accent-color);
+}
+
+/* ==========================================
+   4. AWARDS BADGE SECTION
+   ========================================== */
 .awards-badge-section {
   background: var(--bg-color);
   padding: 4rem 1.5rem;
   margin: 2.5rem 0;
-}
-
-.awards-badge-section .section-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
 }
 
 .awards-badge-section .section-title h2 {
@@ -963,7 +973,7 @@ body {
   display: block;
   width: 60px;
   height: 4px;
-  background: var(--award-gold);
+  background: var(--award-gold, #d4af37);
   margin: 0.6rem auto 0;
   border-radius: 2px;
 }
@@ -977,7 +987,6 @@ body {
   margin: 0 auto;
 }
 
-/* Badge Card - மென்மையான பச்சை பார்டர் & ஷேடோ */
 .badge-card {
   background: var(--card-bg);
   padding: 1rem 1.6rem;
@@ -985,22 +994,21 @@ body {
   display: flex;
   align-items: center;
   min-width: 290px;
-  border: 1px solid var(--award-card-border);
-  box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.08); /* லேசான பச்சை ஷேடோ */
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 
 .badge-card:hover {
-  border-color: var(--award-gold);
+  border-color: var(--award-gold, #d4af37);
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.2);
+  box-shadow: var(--hover-shadow);
 }
 
-/* ஐகானை வட்ட வடிவத்திற்குள் தங்க நிறத்தில் பிரீமியமாக மாற்றும் பகுதி */
 .b-icon {
   width: 48px;
   height: 48px;
-  background: var(--award-icon-bg);
+  background: rgba(212, 175, 55, 0.12);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1011,7 +1019,7 @@ body {
 
 .b-icon i {
   font-size: 1.5rem;
-  color: var(--award-gold) !important; /* ஐகானை தங்க நிறத்திற்கு மாற்றும் */
+  color: var(--award-gold, #d4af37) !important;
 }
 
 .b-details h3 {
@@ -1027,6 +1035,19 @@ body {
   margin: 0;
 }
 
+/* RESPONSIVE LAYOUT FOR MOBILE */
+@media (max-width: 768px) {
+  .story-container {
+    grid-template-columns: 1fr;
+  }
+  .timeline-card,
+  .stat-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+  
 
 /* ========================================================
    6. PRODUCTS PAGE STYLES (UPDATED & FIXED)

@@ -46,6 +46,9 @@ body {
   line-height: 1.6;
   transition: background-color 0.4s ease, color 0.4s ease;
   overflow-x: hidden;
+    -webkit-user-select: none; /* Safari / Chrome */
+  -ms-user-select: none;     /* IE 10+ / Edge */
+  user-select: none;
 }
 
 /* ========================================================

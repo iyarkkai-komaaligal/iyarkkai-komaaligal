@@ -24,6 +24,9 @@
   --border-color: #153e31;
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   --hover-shadow: 0 20px 40px -15px rgba(34, 197, 94, 0.25);
+   /* டார்க் மோடில் விருதுகள் பின்னணி */
+  --gold-color: #eab308;
+  --section-alt-bg: #041712;
 }
 
 /* RESET & BASE STYLES */
@@ -928,6 +931,87 @@ body {
   color: var(--text-color);
   display: flex;
   align-items: center;
+}
+/* ==========================================
+   AWARDS BADGE SECTION (THEME COMPATIBLE)
+   ========================================== */
+
+.awards-badge-section {
+  background: var(--section-alt-bg);
+  padding: 4rem 1.5rem;
+  margin: 3rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.awards-badge-section .section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.awards-badge-section .section-title h2 {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.awards-badge-section .section-title h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: var(--gold-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.badges-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.badge-card {
+  background: var(--card-bg);
+  padding: 1.1rem 1.6rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.badge-card:hover {
+  border-color: var(--gold-color);
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+.b-icon i {
+  font-size: 1.8rem;
+  color: var(--gold-color);
+  margin-right: 1rem;
+}
+
+.b-details h4 {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.b-details p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
 /* ========================================================
